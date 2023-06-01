@@ -42,6 +42,4 @@ def hello_world():
     print(f"response: {response}")
 
     response = response.replace(",", "")
-    if response.startswith("Insula:"):
-        return response[7:]
-    return response
+    return response[7:] if response.startswith("Insula:") else response
